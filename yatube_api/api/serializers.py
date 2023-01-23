@@ -2,7 +2,6 @@ from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.serializers import ValidationError, CurrentUserDefault
 
-
 from posts.models import Comment, Post, Group, Follow, User
 
 
@@ -10,7 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
     author = SlugRelatedField(slug_field='username', read_only=True)
 
     class Meta:
-        fields = '__all__'
+        fields = ('id', 'text', 'author', 'image', 'group', 'pub_date')
         model = Post
 
 
@@ -20,7 +19,7 @@ class CommentSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-        fields = '__all__'
+        fields = ('id', 'author', 'post', 'text', 'created')
         model = Comment
         read_only_fields = ('author', 'post')
 
@@ -29,7 +28,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = '__all__'
+        fields = ('id', 'title', 'slug', 'description')
 
 
 class FollowSerializer(serializers.ModelSerializer):
