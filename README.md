@@ -5,10 +5,11 @@
 API-сервис для социальной сети [Yatube](https://github.com/bvsvrvb/praktikum-yatube), позволяющий настроить полное взаимодействие с социальной сетью через сторонний интерфейс. Аутентификация реализована с использованием JWT-токенов.
 
 ## Технологии
-[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=python)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=django)](https://www.djangoproject.com/)
-[![Django REST Framework](https://img.shields.io/badge/-Django_REST_Framework-464646?style=flat-square&logo=django)](https://www.django-rest-framework.org/)
-[![SQLite](https://img.shields.io/badge/-SQLite-464646?style=flat-square&logo=sqlite)](https://www.sqlite.org/)
+[![Python](https://img.shields.io/badge/Python-3.7-3776AB?logo=python)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-3.2-092E20?&logo=django)](https://www.djangoproject.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite)](https://www.sqlite.org/)
+[![Django REST Framework](https://img.shields.io/badge/Django_REST_Framework-grey?logo=django)](https://www.django-rest-framework.org/)
+[![JSON Web Tokens](https://img.shields.io/badge/JSON_Web_Tokens-grey?logo=jsonwebtokens)](https://jwt.io/)
 
 ## Доступные эндпоинты
 - `api/v1/jwt/create/` (POST): передаём логин и пароль, получаем токен;
